@@ -40,22 +40,6 @@ links:
   # - {icon: github, label: GitHub, url: "https://github.com/kjibran"}
   - {icon: portfolio, label: "Portfolio: ML and AI engineering projects", url: "https://www.ruchakhot.com/"}
 
-metrics:
-  as_of: 10 October 2026
-  items:
-    - {label: h-index, value: "23 (Web of Science), 28 (Google Scholar)"}
-    - {label: Citations, value: "2,216 (Web of Science), 3,614 (Google Scholar)"}
-
-research_focus:
-  - Physics-informed and data-driven environmental modelling, including physics-informed neural networks
-  - Data assimilation, inverse modelling of emissions and uncertainty quantification
-  # - Atmospheric dispersion across scales, from street canyons to national exposure models (Gaussian, box, Lagrangian, Eulerian, CFD)
-  # - Integration of satellite, in situ and mobile observations into modelling frameworks
-  # - Operational air quality forecasting and scientific software at national scale
-  # - Environmental noise modelling and assessment
-  # - Machine learning for atmospheric composition, noise and exposure modelling
-  # - Climate and air quality interactions, and greenhouse gas monitoring
-
 positions:
   - period: 2024–present
     role: Docent (Associate Professor)

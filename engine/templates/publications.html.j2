@@ -12,7 +12,6 @@ h1 { font-size: 1.9rem; margin: 0 0 0.4rem; }
 {% block content %}
 <h1>Publications</h1>
 <p class="lead">{{ pubs | length }} publications, {{ year_span[0] }}–{{ year_span[1] }}.
-{% if p.metrics is defined and p.metrics %}{% for x in p.metrics['items'] %}{{ x.label }}: {{ x.value }}{% if not loop.last %}. {% endif %}{% endfor %}. As of {{ p.metrics.as_of }}.{% endif %}
 {% if person.highlight_name %}{{ ' ' }}My name is in bold.{% endif %}</p>
 <figure class="chart-box">
   {{ chart }}

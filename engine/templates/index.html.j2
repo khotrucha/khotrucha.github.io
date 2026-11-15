@@ -14,7 +14,6 @@
 .icons a:hover { color: var(--accent); }
 .icons .icon { width: 1.45rem; height: 1.45rem; }
 @media (max-width: 30rem) { .icons { max-width: 16rem; margin-left: auto; margin-right: auto; gap: 0.5rem 0.75rem; } }
-.metrics { font-size: 0.92rem; color: var(--muted); margin: 0 0 1.2rem; }
 .more { margin-top: 1.25rem; }
 .talk-authors { color: var(--muted); font-size: 0.95rem; }
 {% endblock %}
@@ -31,11 +30,6 @@
   </nav>
 </section>
 
-{% if p.research_focus is defined and p.research_focus %}
-<h2 id="research">Current research focus</h2>
-<ul class="plain">{% for item in p.research_focus %}<li>{{ item | rich }}</li>{% endfor %}</ul>
-{% endif %}
-
 {% if p.positions is defined and p.positions %}
 <h2 id="experience">Experience</h2>
 {% for x in p.positions %}{{ m.entry(x.period, x.role, x.place, points=x.points or []) }}{% endfor %}
@@ -48,9 +42,6 @@
 
 {% if selected %}
 <h2 id="publications">{{ selected_text.heading }}</h2>
-{% if p.metrics is defined and p.metrics %}
-<p class="metrics">{% for x in p.metrics['items'] %}{{ x.label }}: {{ x.value }}{% if not loop.last %}. {% endif %}{% endfor %}. As of {{ p.metrics.as_of }}.</p>
-{% endif %}
 <figure class="chart-box">
   {{ chart }}
   <figcaption>Publications per year, {{ year_span[0] }}–{{ year_span[1] }}.</figcaption>

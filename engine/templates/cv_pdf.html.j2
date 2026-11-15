@@ -63,16 +63,6 @@ ul.plain li { margin: 0.6mm 0; }
   {% for link in links if link.url.startswith('http') %}<span><a href="{{ link.url }}">{{ link.label.split(':')[0] }}</a></span>{% endfor %}
 </p>
 
-{% if p.metrics is defined and p.metrics %}
-<h2>Profile</h2>
-<p class="muted">{% for x in p.metrics['items'] %}{{ x.label }}: {{ x.value }}{% if not loop.last %}. {% endif %}{% endfor %}. As of {{ p.metrics.as_of }}.</p>
-{% endif %}
-
-{% if p.research_focus is defined and p.research_focus %}
-<h2>Current research focus</h2>
-<ul class="plain">{% for item in p.research_focus %}<li>{{ item | rich }}</li>{% endfor %}</ul>
-{% endif %}
-
 {% if p.positions is defined and p.positions %}
 <h2>Experience</h2>
 {% for x in p.positions %}{{ m.entry(x.period, x.role, x.place, points=x.points or []) }}{% endfor %}
