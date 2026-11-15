@@ -48,9 +48,9 @@ metrics:
     - {label: h-index, value: "23 (Web of Science), 28 (Google Scholar)"}
     - {label: Citations, value: "2,216 (Web of Science), 3,614 (Google Scholar)"}
 
-research_focus:""
-  # - Physics-informed and data-driven environmental modelling, including physics-informed neural networks
-  # - Data assimilation, inverse modelling of emissions and uncertainty quantification
+research_focus:
+  - Physics-informed and data-driven environmental modelling, including physics-informed neural networks
+  - Data assimilation, inverse modelling of emissions and uncertainty quantification
   # - Atmospheric dispersion across scales, from street canyons to national exposure models (Gaussian, box, Lagrangian, Eulerian, CFD)
   # - Integration of satellite, in situ and mobile observations into modelling frameworks
   # - Operational air quality forecasting and scientific software at national scale
