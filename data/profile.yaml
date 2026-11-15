@@ -3,28 +3,28 @@
 # Text fields are plain text. Links work as [text](https://...). Leave a value as "" to hide it.
 
 site:
-  url: https://jibrankhan.net/cv/        # with a trailing slash
-  title: "Jibran Khan, PhD | Air quality and noise modelling, Aarhus University"   # browser tab and search results
-  source_repo: https://github.com/kjibran/cv   # linked in the footer, "" to hide
+  url: https://khotrucha.github.io/        # with a trailing slash
+  title: "Rucha Khot, PhD | Temporal Interactions in Dementia and HCI, Eindhoven University"   # browser tab and search results
+  source_repo: ""   # linked in the footer, "" to hide
   language: en
-  goatcounter: kjibran                       # visitor statistics code, "" to turn off
+  goatcounter: ""                       # visitor statistics code, "" to turn off
   google_verification: ""                    # only needed if the site is not under a verified property
-  pdf_name: Jibran_Khan_CV.pdf
-  timezone: Europe/Copenhagen                # for the "Last updated" date
+  pdf_name: Rucha_Khot_CV.pdf
+  timezone: Europe/Amsterdam                # for the "Last updated" date
 
 # Text around the selected papers on the main page. {total} becomes the number of publications.
 selected_publications:
   heading: Selected publications
-  intro: Air pollution and noise modelling, measurements and machine learning.
+  intro: Temporal interactions in dementia and human-computer interaction.
   more: "All {total} publications, including the health studies, are on the publications page."
 
 person:
-  name: Jibran Khan
+  name: Rucha Khot
   title: Atmospheric scientist working on numerical modelling and physics-informed, data-driven methods
-  location: Copenhagen, Denmark
+  location: Eindhoven, Netherlands
   photo: photo.jpg                            # in the data folder, square works best
-  highlight_name: Khan, J.                   # how your name appears in author lists, shown in bold
-  email: jk.envs@gmail.com                   # shown as a protected link, never as plain text in the page
+  highlight_name: Khot, R.                   # how your name appears in author lists, shown in bold
+  email: khot.rucha@outlook.com                   # shown as a protected link, never as plain text in the page
   bio: >-
     I am a computational environmental scientist at Aarhus University. I develop numerical
     models, data assimilation and physics-informed machine learning for air pollution and
