@@ -32,13 +32,13 @@ links:
   - {icon: mail, label: Email, url: EMAIL}  # "EMAIL" uses person.email, protected from spam bots
   - {icon: orcid, label: ORCID, url: "https://orcid.org/0009-0001-6746-1245"}
   - {icon: scholar, label: Google Scholar, url: "https://scholar.google.com/citations?user=-xiaCIYAAAAJ&hl=en"}
-  - {icon: wos, label: Web of Science, url: "https://www.webofscience.com/wos/author/record/POU-1048-2026"}
+  # - {icon: wos, label: Web of Science, url: "https://www.webofscience.com/wos/author/record/POU-1048-2026"}
   # - {icon: scopus, label: Scopus, url: "https://www.scopus.com/authid/detail.uri?authorId=57201479843"}
   - {icon: researchgate, label: ResearchGate, url: "https://www.researchgate.net/profile/Rucha-Khot"}
   # - {icon: zenodo, label: "Zenodo: open data, code and presentations", url: "https://zenodo.org/search?q=metadata.creators.person_or_org.identifiers.identifier:%220000-0003-2080-2871%22"}
   - {icon: linkedin, label: LinkedIn, url: "https://www.linkedin.com/in/khotrucha/"}
   # - {icon: github, label: GitHub, url: "https://github.com/kjibran"}
-  - {icon: portfolio, label: "Portfolio: ML and AI engineering projects", url: "https://www.ruchakhot.com/"}
+  # - {icon: portfolio, label: "Portfolio: ML and AI engineering projects", url: "https://www.ruchakhot.com/"}
 
 positions:
   - period: 2024–present
