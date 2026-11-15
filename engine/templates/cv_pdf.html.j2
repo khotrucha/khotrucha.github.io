@@ -63,14 +63,14 @@ ul.plain li { margin: 0.6mm 0; }
   {% for link in links if link.url.startswith('http') %}<span><a href="{{ link.url }}">{{ link.label.split(':')[0] }}</a></span>{% endfor %}
 </p>
 
-{% if p.positions is defined and p.positions %}
-<h2>Experience</h2>
-{% for x in p.positions %}{{ m.entry(x.period, x.role, x.place, points=x.points or []) }}{% endfor %}
-{% endif %}
-
 {% if p.education is defined and p.education %}
 <h2>Education</h2>
 {% for x in p.education %}{{ m.entry(x.period, x.degree, x.place, x.detail) }}{% endfor %}
+{% endif %}
+
+{% if p.positions is defined and p.positions %}
+<h2>Experience</h2>
+{% for x in p.positions %}{{ m.entry(x.period, x.role, x.place, points=x.points or []) }}{% endfor %}
 {% endif %}
 
 {% if p.grants is defined and p.grants %}
