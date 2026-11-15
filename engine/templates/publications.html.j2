@@ -13,10 +13,6 @@ h1 { font-size: 1.9rem; margin: 0 0 0.4rem; }
 <h1>Publications</h1>
 <p class="lead">{{ pubs | length }} publications, {{ year_span[0] }}–{{ year_span[1] }}.
 {% if person.highlight_name %}{{ ' ' }}My name is in bold.{% endif %}</p>
-<figure class="chart-box">
-  {{ chart }}
-  <figcaption>Publications per year by type.</figcaption>
-</figure>
 <nav class="jump" aria-label="Publication types">
   {% for t, items in by_type.items() %}<a href="#{{ t }}">{{ types[t] }} ({{ items | length }})</a>{% endfor %}
 </nav>

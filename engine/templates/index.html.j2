@@ -42,10 +42,6 @@
 
 {% if selected %}
 <h2 id="publications">{{ selected_text.heading }}</h2>
-<figure class="chart-box">
-  {{ chart }}
-  <figcaption>Publications per year, {{ year_span[0] }}–{{ year_span[1] }}.</figcaption>
-</figure>
 {% if selected_text.intro %}<p class="muted">{{ selected_text.intro }}</p>{% endif %}
 {% for x in selected %}{{ m.pub(x) }}{% endfor %}
 <p class="more">{{ selected_text.more }} <a href="publications/">See all publications</a>.</p>

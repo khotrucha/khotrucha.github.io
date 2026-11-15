@@ -39,19 +39,16 @@
 :root {
   --bg: #fcfcfa; --text: #1e1e1e; --muted: #5e6166; --faint: #8a8d91;
   --line: #e2e2dd; --accent: #1f4e79; --accent-soft: #e9eef4;
-  --s-journal: #1f4e79; --s-proceedings: #6f93b8; --s-chapter: #b7c7d8; --s-report: #a3a3a0;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #151617; --text: #e5e4e0; --muted: #a3a6aa; --faint: #7c7f83;
     --line: #2e3033; --accent: #8fb6e0; --accent-soft: #1f2833;
-    --s-journal: #8fb6e0; --s-proceedings: #5b7ea3; --s-chapter: #3d566f; --s-report: #6b6c6e;
   }
 }
 :root[data-theme="dark"] {
   --bg: #151617; --text: #e5e4e0; --muted: #a3a6aa; --faint: #7c7f83;
   --line: #2e3033; --accent: #8fb6e0; --accent-soft: #1f2833;
-  --s-journal: #8fb6e0; --s-proceedings: #5b7ea3; --s-chapter: #3d566f; --s-report: #6b6c6e;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -145,21 +142,6 @@ ul.plain li::marker { color: var(--faint); }
 .year-group { display: grid; grid-template-columns: 3.5rem 1fr; column-gap: 1rem; }
 .year-group > .year { color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 0.05rem; }
 @media (max-width: 36rem) { .year-group { grid-template-columns: 1fr; } .year-group > .year { font-weight: 600; margin-bottom: 0.4rem; } }
-
-/* Chart */
-figure.chart-box { margin: 0.5rem 0 1.5rem; }
-svg.chart { width: 100%; height: auto; display: block; }
-svg.chart .grid { stroke: var(--line); stroke-width: 1; }
-svg.chart .tick { fill: var(--muted); font: 14px "Source Serif 4", Georgia, serif; }
-svg.chart rect { stroke: var(--bg); stroke-width: 0.75; }
-.s-journal { fill: var(--s-journal); background: var(--s-journal); }
-.s-proceedings { fill: var(--s-proceedings); background: var(--s-proceedings); }
-.s-chapter { fill: var(--s-chapter); background: var(--s-chapter); }
-.s-report { fill: var(--s-report); background: var(--s-report); }
-.legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem; }
-.legend .key { display: inline-flex; align-items: center; gap: 0.4rem; }
-.legend .swatch { width: 0.75rem; height: 0.75rem; border-radius: 2px; display: inline-block; }
-figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 0.3rem; }
 
 footer { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.85rem; }
 footer a { color: var(--muted); }

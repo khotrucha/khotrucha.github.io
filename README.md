@@ -12,7 +12,6 @@ push, and GitHub builds the website and the PDF for you.
 
 - A main page with your photo, profile links and the full CV, with dates in the margin.
 - A publications page with every paper, grouped by type and year, your name in bold.
-- A chart of publications per year, redrawn from your data on every update.
 - A PDF CV generated from the same data, so the website and the PDF never disagree.
 - Light and dark mode, readable on phones, no tracking cookies.
 - Search engine basics built in: page titles and descriptions, structured data (schema.org),

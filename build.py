@@ -15,7 +15,6 @@ import json
 import re
 import shutil
 import sys
-from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -30,20 +29,12 @@ DATA = ROOT / "data"
 ENGINE = ROOT / "engine"
 OUT = ROOT / "site"
 
-TYPES = {  # order used on the publications page, in the chart and in the PDF
+TYPES = {  # order used on the publications page and in the PDF
     "journal": "Journal articles",
     "proceedings": "Conference proceedings",
     "chapter": "Book chapters",
     "report": "Reports",
 }
-TYPE_SINGULAR = {
-    "journal": "journal article",
-    "proceedings": "conference paper",
-    "chapter": "book chapter",
-    "report": "report",
-}
-
-
 class DataError(Exception):
     pass
 
@@ -151,68 +142,6 @@ def make_icon(icons: dict):
         )
 
     return icon
-
-
-# ------------------------------------------------------------------------ chart
-
-
-def chart_svg(pubs: list[dict]) -> Markup:
-    """Stacked bar chart of publications per year and type, as inline SVG."""
-    counts = Counter((p["year"], p["type"]) for p in pubs)
-    years = list(range(min(p["year"] for p in pubs), max(p["year"] for p in pubs) + 1))
-    totals = {y: sum(counts[(y, t)] for t in TYPES) for y in years}
-    top = max(totals.values())
-    step = 2 if top <= 12 else 5
-    ymax = -(-top // step) * step
-
-    width, height = 640, 230
-    left, right, ptop, bottom = 32, 8, 10, 28
-    plot_w, plot_h = width - left - right, height - ptop - bottom
-    slot = plot_w / len(years)
-    bar = slot * 0.62
-
-    def y_of(v: float) -> float:
-        return ptop + plot_h - v / ymax * plot_h
-
-    parts = []
-    for v in range(0, ymax + 1, step):
-        y = y_of(v)
-        parts.append(f'<line class="grid" x1="{left}" x2="{width - right}" y1="{y:.1f}" y2="{y:.1f}"/>')
-        parts.append(f'<text class="tick" x="{left - 6}" y="{y + 4:.1f}" text-anchor="end">{v}</text>')
-    for i, year in enumerate(years):
-        x = left + i * slot + (slot - bar) / 2
-        acc = 0
-        for t in TYPES:
-            n = counts[(year, t)]
-            if not n:
-                continue
-            y0, y1 = y_of(acc), y_of(acc + n)
-            label = f"{year}: {n} {TYPE_SINGULAR[t]}{'s' if n > 1 else ''}"
-            parts.append(
-                f'<rect class="s-{t}" x="{x:.1f}" y="{y1:.1f}" width="{bar:.1f}" height="{y0 - y1:.1f}">'
-                f"<title>{label}</title></rect>"
-            )
-            acc += n
-        show_label = len(years) <= 14 or (year - years[0]) % 2 == 0
-        if show_label:
-            parts.append(
-                f'<text class="tick" x="{x + bar / 2:.1f}" y="{height - 8}" text-anchor="middle">{year}</text>'
-            )
-
-    used = [t for t in TYPES if any(p["type"] == t for p in pubs)]
-    desc = ", ".join(f"{sum(1 for p in pubs if p['type'] == t)} {TYPES[t].lower()}" for t in used)
-    svg = (
-        f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" '
-        f'aria-label="Publications per year by type, {years[0]} to {years[-1]}: {desc}">'
-        + "".join(parts)
-        + "</svg>"
-    )
-    legend = "".join(
-        f'<span class="key"><span class="swatch s-{t}"></span>{TYPES[t]} '
-        f"({sum(1 for p in pubs if p['type'] == t)})</span>"
-        for t in used
-    )
-    return Markup(f'{svg}<div class="legend">{legend}</div>')
 
 
 # ------------------------------------------------------------------------ images
@@ -415,7 +344,6 @@ def main() -> int:
         "types": TYPES,
         "by_type": by_type,
         "grouped": grouped,
-        "chart": chart_svg(pubs) if pubs else Markup(""),
         "updated": f"{now.day} {now:%B %Y}",
         "updated_iso": now.date().isoformat(),
         "year_span": (min(p["year"] for p in pubs), max(p["year"] for p in pubs)) if pubs else None,
