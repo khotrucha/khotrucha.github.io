@@ -4,7 +4,7 @@
 
 site:
   url: https://khotrucha.github.io/        # with a trailing slash
-  title: "Rucha Khot, PhD | Temporal Interactions in Dementia and HCI, Eindhoven University"   # browser tab and search results
+  title: "Rucha Khot, PhD | Temporal Interactions in Dementia and HCI, Eindhoven University of Technology"   # browser tab and search results
   source_repo: ""   # linked in the footer, "" to hide
   language: en
   goatcounter: ""                       # visitor statistics code, "" to turn off
@@ -14,37 +14,33 @@ site:
 
 # Text around the selected papers on the main page. {total} becomes the number of publications.
 selected_publications:
-  heading: Selected publications
-  intro: Temporal interactions in dementia and human-computer interaction.
+  heading: Publications
+  intro: ""
   more: "All {total} publications, including the health studies, are on the publications page."
 
 person:
   name: Rucha Khot
-  title: Atmospheric scientist working on numerical modelling and physics-informed, data-driven methods
+  title: ""
   location: Eindhoven, Netherlands
   photo: photo.jpg                            # in the data folder, square works best
   highlight_name: Khot, R.                   # how your name appears in author lists, shown in bold
   email: khot.rucha@outlook.com                   # shown as a protected link, never as plain text in the page
   bio: >-
-    I am a computational environmental scientist at Aarhus University. I develop numerical
-    models, data assimilation and physics-informed machine learning for air pollution and
-    environmental noise, combining physical process models with satellite, in situ and
-    mobile observations. I build operational systems used by authorities and the public,
-    and lead externally funded research in Denmark and Europe.
+    ""
 
 # Icons available: cv, mail, orcid, scholar, wos, scopus, researchgate, zenodo, linkedin, github, portfolio
 links:
   - {icon: cv, label: CV as PDF, url: PDF}  # "PDF" points to the generated PDF
   - {icon: mail, label: Email, url: EMAIL}  # "EMAIL" uses person.email, protected from spam bots
-  - {icon: orcid, label: ORCID, url: "https://orcid.org/0000-0003-2080-2871"}
-  - {icon: scholar, label: Google Scholar, url: "https://scholar.google.dk/citations?user=tUffwOIAAAAJ&hl=en"}
-  - {icon: wos, label: Web of Science, url: "https://www.webofscience.com/wos/author/record/AAQ-2177-2021"}
-  - {icon: scopus, label: Scopus, url: "https://www.scopus.com/authid/detail.uri?authorId=57201479843"}
-  - {icon: researchgate, label: ResearchGate, url: "https://www.researchgate.net/profile/Jibran-Khan"}
-  - {icon: zenodo, label: "Zenodo: open data, code and presentations", url: "https://zenodo.org/search?q=metadata.creators.person_or_org.identifiers.identifier:%220000-0003-2080-2871%22"}
-  - {icon: linkedin, label: LinkedIn, url: "https://www.linkedin.com/in/jibran-khan-48601185/"}
-  - {icon: github, label: GitHub, url: "https://github.com/kjibran"}
-  - {icon: portfolio, label: "Portfolio: ML and AI engineering projects", url: "https://jibrankhan.net/"}
+  - {icon: orcid, label: ORCID, url: "https://orcid.org/0009-0001-6746-1245"}
+  - {icon: scholar, label: Google Scholar, url: "https://scholar.google.com/citations?user=-xiaCIYAAAAJ&hl=en"}
+  - {icon: wos, label: Web of Science, url: "https://www.webofscience.com/wos/author/record/POU-1048-2026"}
+  # - {icon: scopus, label: Scopus, url: "https://www.scopus.com/authid/detail.uri?authorId=57201479843"}
+  - {icon: researchgate, label: ResearchGate, url: "https://www.researchgate.net/profile/Rucha-Khot"}
+  # - {icon: zenodo, label: "Zenodo: open data, code and presentations", url: "https://zenodo.org/search?q=metadata.creators.person_or_org.identifiers.identifier:%220000-0003-2080-2871%22"}
+  - {icon: linkedin, label: LinkedIn, url: "https://www.linkedin.com/in/khotrucha/"}
+  # - {icon: github, label: GitHub, url: "https://github.com/kjibran"}
+  - {icon: portfolio, label: "Portfolio: ML and AI engineering projects", url: "https://www.ruchakhot.com/"}
 
 metrics:
   as_of: 10 October 2026
@@ -52,15 +48,15 @@ metrics:
     - {label: h-index, value: "23 (Web of Science), 28 (Google Scholar)"}
     - {label: Citations, value: "2,216 (Web of Science), 3,614 (Google Scholar)"}
 
-research_focus:
-  - Physics-informed and data-driven environmental modelling, including physics-informed neural networks
-  - Data assimilation, inverse modelling of emissions and uncertainty quantification
-  - Atmospheric dispersion across scales, from street canyons to national exposure models (Gaussian, box, Lagrangian, Eulerian, CFD)
-  - Integration of satellite, in situ and mobile observations into modelling frameworks
-  - Operational air quality forecasting and scientific software at national scale
-  - Environmental noise modelling and assessment
-  - Machine learning for atmospheric composition, noise and exposure modelling
-  - Climate and air quality interactions, and greenhouse gas monitoring
+research_focus:""
+  # - Physics-informed and data-driven environmental modelling, including physics-informed neural networks
+  # - Data assimilation, inverse modelling of emissions and uncertainty quantification
+  # - Atmospheric dispersion across scales, from street canyons to national exposure models (Gaussian, box, Lagrangian, Eulerian, CFD)
+  # - Integration of satellite, in situ and mobile observations into modelling frameworks
+  # - Operational air quality forecasting and scientific software at national scale
+  # - Environmental noise modelling and assessment
+  # - Machine learning for atmospheric composition, noise and exposure modelling
+  # - Climate and air quality interactions, and greenhouse gas monitoring
 
 positions:
   - period: 2024–present
