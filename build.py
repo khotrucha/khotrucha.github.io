@@ -68,9 +68,8 @@ def load_data() -> tuple[dict, list[dict]]:
         profile["person"].setdefault(key, "")
     if not profile["site"]["url"].endswith("/"):
         profile["site"]["url"] += "/"
-    for key in ("name", "bio"):
-        if not profile["person"].get(key):
-            raise DataError(f"profile.yaml: person.{key} is empty")
+    if not profile["person"].get("name"):
+        raise DataError("profile.yaml: person.name is empty")
 
     for i, p in enumerate(pubs, 1):
         where = f"publications.yaml, entry {i} ({str(p.get('title', ''))[:50]!r})"

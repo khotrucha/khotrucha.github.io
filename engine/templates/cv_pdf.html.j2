@@ -63,9 +63,8 @@ ul.plain li { margin: 0.6mm 0; }
   {% for link in links if link.url.startswith('http') %}<span><a href="{{ link.url }}">{{ link.label.split(':')[0] }}</a></span>{% endfor %}
 </p>
 
-<h2>Profile</h2>
-<p>{{ person.bio | rich }}</p>
 {% if p.metrics is defined and p.metrics %}
+<h2>Profile</h2>
 <p class="muted">{% for x in p.metrics['items'] %}{{ x.label }}: {{ x.value }}{% if not loop.last %}. {% endif %}{% endfor %}. As of {{ p.metrics.as_of }}.</p>
 {% endif %}
 

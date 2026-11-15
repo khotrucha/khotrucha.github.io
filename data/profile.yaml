@@ -25,7 +25,6 @@ person:
   photo: photo.jpg                            # in the data folder, square works best
   highlight_name: Khot, R.                   # how your name appears in author lists, shown in bold
   email: khot.rucha@outlook.com                   # shown as a protected link, never as plain text in the page
-  bio: ""
 
 # Icons available: cv, mail, orcid, scholar, wos, scopus, researchgate, zenodo, linkedin, github, portfolio
 links:

@@ -1,14 +1,13 @@
 {% extends "base.html.j2" %}
 {% import "macros.html.j2" as m with context %}
 {% block title %}{{ site.title or person.name }}{% endblock %}
-{% block description %}{{ person.bio | truncate(158, true, '…') }}{% endblock %}
+{% block description %}{{ (person.title or site.title or person.name) | truncate(158, true, '…') }}{% endblock %}
 {% block path %}{% endblock %}
 {% block style %}
 .top { text-align: center; padding-top: 0.5rem; }
 .top img { width: 9.5rem; height: 9.5rem; border-radius: 0.9rem; display: block; margin: 0 auto 1.2rem; background: var(--line); }
 .top h1 { font-size: 2.1rem; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
 .top .tagline { color: var(--muted); font-size: 1.08rem; margin: 0 auto 1rem; max-width: 34rem; }
-.top .bio { max-width: 38rem; margin: 0 auto 1.25rem; }
 .top .place { color: var(--faint); font-size: 0.95rem; margin: -0.6rem 0 1.1rem; }
 .icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.35rem 0.9rem; margin: 0 0 0.5rem; }
 .icons a { color: var(--muted); display: inline-flex; padding: 0.2rem; }
@@ -27,7 +26,6 @@
   <h1>{{ person.name }}</h1>
   {% if person.title %}<p class="tagline">{{ person.title | rich }}</p>{% endif %}
   {% if person.location %}<p class="place">{{ person.location }}</p>{% endif %}
-  <p class="bio">{{ person.bio | rich }}</p>
   <nav class="icons" aria-label="Profiles and contact">
     {% for link in links %}{{ m.icon_link(link, root) }}{% endfor %}
   </nav>

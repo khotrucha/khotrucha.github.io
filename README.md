@@ -10,7 +10,7 @@ push, and GitHub builds the website and the PDF for you.
 
 ## What you get
 
-- A main page with your photo, a short bio, profile links and the full CV, with dates in the margin.
+- A main page with your photo, profile links and the full CV, with dates in the margin.
 - A publications page with every paper, grouped by type and year, your name in bold.
 - A chart of publications per year, redrawn from your data on every update.
 - A PDF CV generated from the same data, so the website and the PDF never disagree.
@@ -35,7 +35,7 @@ You need a GitHub account. Nothing has to be installed on your computer.
    (**Add file > Upload files** in the `data` folder). Square works best. The build turns it grey
    and resizes it. To show no photo, set `photo: ""` in `data/profile.yaml`.
 4. **Edit `data/profile.yaml`.** Open it on GitHub and click the pencil icon. Change `site.url`
-   to your address, then your name, bio, links, positions and so on. Every section is optional.
+   to your address, then your name, links, positions and so on. Every section is optional.
    Delete a section and it disappears from the site and the PDF.
 5. **Edit `data/publications.yaml`.** Replace the entries with your own. Mark the papers for the
    main page with `selected: true`.
