@@ -4,7 +4,7 @@
 
 site:
   url: https://khotrucha.github.io/        # with a trailing slash
-  title: "Rucha Khot, PhD | Temporal Interactions in Dementia and HCI, Eindhoven University of Technology"   # browser tab and search results
+  title: "Rucha Khot, PhD | HCI Researcher | Inclusive & Responsible Technology | Accessibility | Health & Wellbeing | Participatory Design"   # browser tab and search results
   source_repo: ""   # linked in the footer, "" to hide
   language: en
   goatcounter: ""                       # visitor statistics code, "" to turn off
@@ -20,7 +20,7 @@ selected_publications:
 
 person:
   name: Rucha Khot
-  title: ""
+  title: "HCI Researcher | Inclusive & Responsible Technology | Accessibility | Health & Wellbeing | Participatory Design"
   location: Eindhoven, Netherlands
   photo: photo.jpg                            # in the data folder, square works best
   highlight_name: Khot, R.                   # how your name appears in author lists, shown in bold
