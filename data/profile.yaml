@@ -3,9 +3,9 @@
 # Text fields are plain text. Links work as [text](https://...). Leave a value as "" to hide it.
 
 site:
-  url: https://khotrucha.github.io/        # with a trailing slash
-  title: "Your Name | Your Title"   # browser tab and search results
-  source_repo: https://github.com/khotrucha/khotrucha.github.io   # linked in the footer, "" to hide
+  url: https://jibrankhan.net/cv/        # with a trailing slash
+  title: "Jibran Khan, PhD | Air quality and noise modelling, Aarhus University"   # browser tab and search results
+  source_repo: https://github.com/kjibran/cv   # linked in the footer, "" to hide
   language: en
   goatcounter: kjibran                       # visitor statistics code, "" to turn off
   google_verification: ""                    # only needed if the site is not under a verified property
